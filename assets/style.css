@@ -20,13 +20,24 @@ body {
   height: 100vh;
   align-items: center;
   color: white;
-  font-family: helvetica, sans-serif, serif, monospace;
+  font-family: monospace;
   font-size: 24px;
   background-color: darkslategray;
 }
 
 h2 {
   font-weight: 500;
+}
+
+/* JS Properites */
+
+.show {
+  /* display: none; */
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 /* Header Properties */
@@ -45,6 +56,10 @@ header a {
 
 header a:hover {
   color: slategray;
+}
+header a::before,
+header a::after {
+  content: "|";
 }
 
 /* Main Properties */
@@ -68,4 +83,56 @@ footer hr {
   border-style: none;
   height: 1px;
   background-color: slategray;
+}
+
+/* roll.html properties */
+
+section {
+  width: 33.333%;
+}
+
+section button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: slategray;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+}
+
+section button:hover,
+section button:focus {
+  background-color: lightsteelblue;
+}
+
+#class {
+  position: relative;
+}
+
+#down-arrow {
+  height: 1.5em;
+}
+
+.dropdown {
+  width: 130px;
+  font-size: 15px;
+  text-align: center;
+  color: black;
+  background-color: lightgray;
+  z-index: 1;
+  /* display:none; */
+}
+
+.dropdown p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0.25em;
+}
+
+.dropdown p:hover {
+  background-color: lightsteelblue;
+  cursor: pointer;
 }
