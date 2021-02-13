@@ -335,11 +335,6 @@ if ((manaInput - buttonMana) > 0) {
 } else {manaOutput.textContent = (manaInput - buttonMana);
 }  
 
-if ((defInput - buttonDef) > 0) {
-  defOutput.textContent = "+" + (defInput - buttonDef);
-} else {defOutput.textContent = (defInput - buttonDef);
-}
-
 if ((attInput - buttonAtt) > 0) {
   attOutput.textContent = "+" + (attInput - buttonAtt);
 } else {attOutput.textContent = (attInput - buttonAtt);
