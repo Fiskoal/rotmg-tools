@@ -185,3 +185,7 @@ input::placeholder {
 .output {
   margin-top: 5px;
 }
+
+#output-roll p {
+  color: rgb(143, 165, 187);
+}
