@@ -19,39 +19,75 @@
 
   <main class="row">
     <section id="class" class="column">
-      <button id="classes-button" class="class-button row" class-id="Select Class"></button>
+
+      <button id="classes-button" class="class-button row" class-id="Select Class" life="0" mana="0" def="0" att="0" spd="0" dex="0" vit="0" wis="0"></button>
+
       <div id="class-dropdown" class="dropdown hide" tabindex="-1" data-state="hidden">
-        <option id="rogue" class-id="Rogue">Rogue</option>
-        <option id="archer" class-id="Archer">Archer</option>
-        <option id="wizard" class-id="Wizard">Wizard</option>
-        <option id="priest" class-id="Priest">Priest</option>
-        <option id="warrior" class-id="Warrior">Warrior</option>
-        <option id="knight" class-id="Knight">Knight</option>
-        <option id="paladin" class-id="Paladin">Paladin</option>
-        <option id="assassin" class-id="Assassin">Assassin</option>
-        <option id="necromancer" class-id="Necromancer">Necromancer</option>
-        <option id="huntress" class-id="Huntress">Huntress</option>
-        <option id="mystic" class-id="Mystic">Mystic</option>
-        <option id="trickster" class-id="Trickster">Trickster</option>
-        <option id="sorcerer" class-id="Sorcerer">Sorcerer</option>
-        <option id="ninja" class-id="Ninja">Ninja</option>
-        <option id="samurai" class-id="Samurai">Samurai</option>
-        <option id="bard" class-id="Bard">Bard</option>
+
+        <option id="rogue" class-id="Rogue" life="625" mana="195" def="25" att="29" spd="43" dex="43" vit="24" wis="29">Rogue</option>
+
+        <option id="archer" class-id="Archer" life="605" mana="195" def="25" att="40" spd="31" dex="31" vit="21" wis="29">Archer</option>
+
+        <option id="wizard" class-id="Wizard" life="575" mana="290" def="25" att="40" spd="29" dex="43" vit="21" wis="31">Wizard</option>
+
+        <option id="priest" class-id="Priest" life="575" mana="290" def="25" att="31" spd="40" dex="31" vit="19" wis="43">Priest</option>
+
+        <option id="warrior" class-id="Warrior" life="675" mana="195" def="25" att="43" spd="26" dex="29" vit="38" wis="29">Warrior</option>
+
+        <option id="knight" class-id="Knight" life="675" mana="195" def="40" att="43" spd="26" dex="29" vit="38" wis="29">Knight</option>
+
+        <option id="paladin" class-id="Paladin" life="675" mana="195" def="30" att="40" spd="31" dex="29" vit="38" wis="38">Paladin</option>
+
+        <option id="assassin" class-id="Assassin" life="625" mana="195" def="25" att="31" spd="43" dex="43" vit="24" wis="38">Assassin</option>
+
+        <option id="necromancer" class-id="Necromancer" life="575" mana="290" def="25" att="40" spd="29" dex="43" vit="19" wis="40">Necromancer</option>
+
+        <option id="huntress" class-id="Huntress" life="605" mana="195" def="25" att="40" spd="31" dex="31" vit="21" wis="29">Huntress</option>
+
+        <option id="mystic" class-id="Mystic" life="575" mana="290" def="25" att="38" spd="31" dex="38" vit="24" wis="43">Mystic</option>
+
+        <option id="trickster" class-id="Trickster" life="625" mana="195" def="25" att="38" spd="40" dex="43" vit="21" wis="31">Trickster</option>
+
+        <option id="sorcerer" class-id="Sorcerer" life="575" mana="290" def="25" att="40" spd="40" dex="31" vit="38" wis="43">Sorcerer</option>
+
+        <option id="ninja" class-id="Ninja" life="625" mana="195" def="25" att="43" spd="38" dex="40" vit="40" wis="40">Ninja</option>
+
+        <option id="samurai" class-id="Samurai" life="625" mana="195" def="30" att="40" spd="29" dex="29" vit="40" wis="40">Samurai</option>
+
+        <option id="bard" class-id="Bard" life="575" mana="290" def="25" att="38" spd="29" dex="43" vit="31" wis="43">Bard</option>
+
       </div>
     </section>
     <section id="input-roll" class="column">
       <h2>Your Stats</h2>
-      <input type="text" placeholder="Life">
-      <input type="text" placeholder="Mana">
-      <input type="text" placeholder="Attack">
-      <input type="text" placeholder="Defense">
-      <input type="text" placeholder="Speed">
-      <input type="text" placeholder="Dexterity">
-      <input type="text" placeholder="Vitality">
-      <input type="text" placeholder="Wisdom">
+      <input type="text" placeholder="Life" id="life-input" maxlength="3">
+      <input type="text" placeholder="Mana" id="mana-input" maxlength="3">
+      <input type="text" placeholder="Attack" id="att-input" maxlength="2">
+      <input type="text" placeholder="Defense" id="def-input" maxlength="2">
+      <input type="text" placeholder="Speed" id="spd-input" maxlength="2">
+      <input type="text" placeholder="Dexterity" id="dex-input" maxlength="2">
+      <input type="text" placeholder="Vitality" id="vit-input" maxlength="2">
+      <input type="text" placeholder="Wisdom" id="wis-input" maxlength="2">
+      <button id="check-roll">Check Roll</button>
     </section>
     <section class="column" id="output-roll">
-
+      <div class="row">
+        <p>Life: </p><div class="output" id="life-output"></div>
+      </div><div class="row">
+        <p>Mana: </p><div class="output" id="mana-output"></div>
+      </div><div class="row">
+        <p>Attack: </p><div class="output" id="att-output"></div>
+      </div><div class="row">
+        <p>Defense: </p><div class="output" id="def-output"></div>
+      </div><div class="row">
+        <p>Speed: </p><div class="output" id="spd-output"></div>
+      </div><div class="row">
+        <p>Dexterity: </p><div class="output" id="dex-output"></div>
+      </div><div class="row">
+        <p>Vitality: </p><div class="output" id="vit-output"></div>
+      </div><div class="row">
+        <p>Wisdom: </p><div class="output" id="wis-output"></div>
+      </div>
     </section>
   </main>
 

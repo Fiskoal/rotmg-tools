@@ -67,7 +67,7 @@ header a::after {
 main {
   width: 1000px;
   max-width: 100vw;
-  height: 50%;
+  height: 80%;
   justify-content: center;
   align-items: center;
 }
@@ -91,6 +91,10 @@ footer hr {
 section {
   width: 33.333%;
   align-items: center;
+}
+
+section p {
+  margin: 5px;
 }
 
 #classes-button {
@@ -157,4 +161,27 @@ input {
 input::placeholder {
   font-family: inherit;
   color: rgba(255, 255, 255, 0.333);
+}
+
+#check-roll {
+  font-family: inherit;
+  background-color: slategray;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+#check-roll:hover {
+  background-color: lightsteelblue;
+  outline: none;
+}
+
+#check-roll:focus {
+  outline:none;
+}
+
+.output {
+  margin-top: 5px;
 }
