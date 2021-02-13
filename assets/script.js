@@ -298,7 +298,6 @@ let rollButton = document.getElementById("check-roll");
 rollButton.addEventListener("click", function () {
 let buttonLife = classesButton.getAttribute("life");
 let buttonMana = classesButton.getAttribute("mana");
-let buttonDef = classesButton.getAttribute("def");
 let buttonAtt = classesButton.getAttribute("att");
 let buttonSpd = classesButton.getAttribute("spd");
 let buttonDex = classesButton.getAttribute("dex");
@@ -307,7 +306,6 @@ let buttonWis = classesButton.getAttribute("wis");
 
 let lifeInput = document.getElementById("life-input").value;
 let manaInput = document.getElementById("mana-input").value;
-let defInput = document.getElementById("def-input").value;
 let attInput = document.getElementById("att-input").value;
 let spdInput = document.getElementById("spd-input").value;
 let dexInput = document.getElementById("dex-input").value;
