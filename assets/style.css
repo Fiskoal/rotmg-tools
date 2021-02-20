@@ -83,7 +83,7 @@ main:before {
   top: 0;
   z-index: -1;
   opacity: 0.5;
-  background-image: url("/assets/images/cube-background.png");
+  background-image: url("https://raw.githubusercontent.com/Fiskoal/rotmg-tools/main/assets/images/cube-background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
