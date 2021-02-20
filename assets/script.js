@@ -296,65 +296,70 @@ bard.addEventListener("click", function () {
 let rollButton = document.getElementById("check-roll");
 
 rollButton.addEventListener("click", function () {
-let buttonLife = classesButton.getAttribute("life");
-let buttonMana = classesButton.getAttribute("mana");
-let buttonAtt = classesButton.getAttribute("att");
-let buttonSpd = classesButton.getAttribute("spd");
-let buttonDex = classesButton.getAttribute("dex");
-let buttonVit = classesButton.getAttribute("vit");
-let buttonWis = classesButton.getAttribute("wis");
+  let buttonLife = classesButton.getAttribute("life");
+  let buttonMana = classesButton.getAttribute("mana");
+  let buttonAtt = classesButton.getAttribute("att");
+  let buttonSpd = classesButton.getAttribute("spd");
+  let buttonDex = classesButton.getAttribute("dex");
+  let buttonVit = classesButton.getAttribute("vit");
+  let buttonWis = classesButton.getAttribute("wis");
 
-let lifeInput = document.getElementById("life-input").value;
-let manaInput = document.getElementById("mana-input").value;
-let attInput = document.getElementById("att-input").value;
-let spdInput = document.getElementById("spd-input").value;
-let dexInput = document.getElementById("dex-input").value;
-let vitInput = document.getElementById("vit-input").value;
-let wisInput = document.getElementById("wis-input").value;
+  let lifeInput = document.getElementById("life-input").value;
+  let manaInput = document.getElementById("mana-input").value;
+  let attInput = document.getElementById("att-input").value;
+  let spdInput = document.getElementById("spd-input").value;
+  let dexInput = document.getElementById("dex-input").value;
+  let vitInput = document.getElementById("vit-input").value;
+  let wisInput = document.getElementById("wis-input").value;
 
-console.log(lifeInput);
 
-let lifeOutput = document.getElementById("life-output");
-let manaOutput = document.getElementById("mana-output");
-let defOutput = document.getElementById("def-output");
-let attOutput = document.getElementById("att-output");
-let spdOutput = document.getElementById("spd-output");
-let dexOutput = document.getElementById("dex-output");
-let vitOutput = document.getElementById("vit-output");
-let wisOutput = document.getElementById("wis-output");
+  let lifeOutput = document.getElementById("life-output");
+  let manaOutput = document.getElementById("mana-output");
+  let attOutput = document.getElementById("att-output");
+  let spdOutput = document.getElementById("spd-output");
+  let dexOutput = document.getElementById("dex-output");
+  let vitOutput = document.getElementById("vit-output");
+  let wisOutput = document.getElementById("wis-output");
 
-if ((lifeInput - buttonLife) > 0) {
-  lifeOutput.textContent = "+" + (lifeInput - buttonLife);
-} else { lifeOutput.textContent = (lifeInput - buttonLife);
-}
+  if ((lifeInput - buttonLife) > 0) {
+    lifeOutput.textContent = "+" + (lifeInput - buttonLife);
+  } else {
+    lifeOutput.textContent = (lifeInput - buttonLife);
+  }
 
-if ((manaInput - buttonMana) > 0) {
-  manaOutput.textContent = "+" + (manaInput - buttonMana);
-} else {manaOutput.textContent = (manaInput - buttonMana);
-}  
+  if ((manaInput - buttonMana) > 0) {
+    manaOutput.textContent = "+" + (manaInput - buttonMana);
+  } else {
+    manaOutput.textContent = (manaInput - buttonMana);
+  }
 
-if ((attInput - buttonAtt) > 0) {
-  attOutput.textContent = "+" + (attInput - buttonAtt);
-} else {attOutput.textContent = (attInput - buttonAtt);
-}
+  if ((attInput - buttonAtt) > 0) {
+    attOutput.textContent = "+" + (attInput - buttonAtt);
+  } else {
+    attOutput.textContent = (attInput - buttonAtt);
+  }
 
-if ((spdInput - buttonSpd) > 0) {
-  spdOutput.textContent = "+" + (spdInput - buttonSpd);
-} else {spdOutput.textContent = (spdInput - buttonSpd);
-}
+  if ((spdInput - buttonSpd) > 0) {
+    spdOutput.textContent = "+" + (spdInput - buttonSpd);
+  } else {
+    spdOutput.textContent = (spdInput - buttonSpd);
+  }
 
-if ((dexInput - buttonDex) > 0) {
-  dexOutput.textContent = "+" + (dexInput - buttonDex);
-} else {dexOutput.textContent = (dexInput - buttonDex);
-}
+  if ((dexInput - buttonDex) > 0) {
+    dexOutput.textContent = "+" + (dexInput - buttonDex);
+  } else {
+    dexOutput.textContent = (dexInput - buttonDex);
+  }
 
-if ((vitInput - buttonVit) > 0) {
-  vitOutput.textContent = "+" + (vitInput - buttonVit);
-} else {vitOutput.textContent = (vitInput - buttonVit);
-}
+  if ((vitInput - buttonVit) > 0) {
+    vitOutput.textContent = "+" + (vitInput - buttonVit);
+  } else {
+    vitOutput.textContent = (vitInput - buttonVit);
+  }
 
-if ((wisInput - buttonWis) > 0) {
-  wisOutput.textContent = "+" + (wisInput - buttonWis);
-} else {wisOutput.textContent = (wisInput - buttonWis);
-}
+  if ((wisInput - buttonWis) > 0) {
+    wisOutput.textContent = "+" + (wisInput - buttonWis);
+  } else {
+    wisOutput.textContent = (wisInput - buttonWis);
+  }
 })

@@ -1,3 +1,11 @@
+:root {
+  --black: black;
+  --opaque-black: #0000008a;
+  --purple: #9560FF;
+  --opaque-purple: #9560ff7a;
+  --pink: #FF51FF;
+}
+
 /* Flex Classes */
 
 .row {
@@ -15,14 +23,17 @@
 /* General Properties */
 
 body {
+  position: relative;
   margin: 0;
   width: 100vw;
   height: 100vh;
   align-items: center;
-  color: white;
-  font-family: monospace;
+  color: var(--purple);
+  font-family: 'Exo 2', monospace;
   font-size: 24px;
-  background-color: darkslategray;
+  background-color: var(--black);
+  line-height: 2em;
+  text-align: center;
 }
 
 h2 {
@@ -44,46 +55,80 @@ h2 {
 
 header {
   width: 90%;
-  margin-top: 10px;
+  margin: 10px 0;
   justify-content: flex-end;
+  z-index: 1;
 }
 
 header a {
   text-decoration: none;
   color: inherit;
   margin: 0 10px;
+  background-color: var(--opaque-black);
 }
 
 header a:hover {
-  color: slategray;
-}
-header a::before,
-header a::after {
-  content: "|";
+  color: var(--pink);
 }
 
 /* Main Properties */
 
-main {
-  width: 1000px;
-  max-width: 100vw;
-  height: 80%;
-  justify-content: center;
-  align-items: center;
+main:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0.5;
+  background-image: url("/assets/images/cube-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+main {
+  position: absolute;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+ .home-container {
+   background-color: var(--opaque-black);
+   border-radius: 10px;
+   width: 800px;
+ }
 /* Footer Properties */
 
 footer {
   position: absolute;
   bottom: 0;
-  color: slategray;
+  color: var(--opaque-purple);
+  margin-bottom: 10px;
+  background-color: var(--opaque-black);
+  padding: 0 10px;
+  border-radius: 10px;
+  z-index: 1;
 }
 
-footer hr {
-  border-style: none;
-  height: 1px;
-  background-color: slategray;
+footer div {
+  align-items: center;
+}
+
+#copy-text {
+  margin: 0 10px 0 0;
+}
+
+#copy {
+  height: 1em;
+  cursor: pointer;
+  background-color: #9560ff7a;
+  padding: 1px;
+  border-radius: 2px;
 }
 
 /* roll.html properties */
@@ -103,16 +148,17 @@ section p {
   cursor: pointer;
   border: none;
   color: white;
-  background-color: slategray;
+  background-color: var(--opaque-purple);
   padding: 10px;
   align-items: center;
   justify-content: center;
   width: 130px;
+  box-shadow: 0 0 20px var(--opaque-purple);
 }
 
 #classes-button:hover,
 #classes-button:focus {
-  background-color: lightsteelblue;
+  background-color: var(--purple);
   outline: none;
 }
 
@@ -127,20 +173,20 @@ section p {
   width: 130px;
   font-size: 15px;
   text-align: center;
-  color: black;
-  background-color: lightgray;
+  color: var(--purple);
+  background-color: var(--opaque-black);
   z-index: 1;
-  /* display:none; */
+  line-height: 1em;
 }
 
 .dropdown option {
   margin-block-start: 0;
   margin-block-end: 0;
-  padding: 0.25em;
+  padding: 0.3em;
 }
 
 .dropdown option:hover {
-  background-color: lightsteelblue;
+  color: var(--pink);
   cursor: pointer;
 }
 
@@ -149,32 +195,19 @@ section p {
   outline: none;
 }
 
-input {
-  background-color: slategray;
-  color: white;
-  font-family: inherit;
-  height: 20px;
-  margin: 10px 0;
-  font-size: 20px;
-}
-
-input::placeholder {
-  font-family: inherit;
-  color: rgba(255, 255, 255, 0.333);
-}
-
 #check-roll {
   font-family: inherit;
-  background-color: slategray;
+  background-color: var(--opaque-purple);
   color: white;
   padding: 10px;
   border: none;
   cursor: pointer;
   margin-top: 5px;
+  box-shadow: 0 0 20px var(--opaque-purple);
 }
 
 #check-roll:hover {
-  background-color: lightsteelblue;
+  background-color: var(--purple);
   outline: none;
 }
 
@@ -184,8 +217,31 @@ input::placeholder {
 
 .output {
   margin-top: 5px;
+  text-align: start;
 }
 
-#output-roll p {
-  color: rgb(143, 165, 187);
+.container {
+  background-color: var(--opaque-black);
+  border-radius: 10px;
+}
+
+#input-roll input{
+  font-family: 'Exo 2', monospace;
+  background-color: transparent;
+  color: var(--purple);
+  height: 20px;
+  margin: 5px 0;
+  /* border: 1px solid var(--purple); */
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--opaque-purple);
+}
+
+#input-roll input::placeholder {
+  font-family: 'Exo 2', monospace;
+  color: var(--opaque-purple);
+}
+
+#input-roll input {
+  outline: none;
 }

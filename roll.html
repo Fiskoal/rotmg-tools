@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="assets/style.css">
   <title>Check Your Roll</title>
   <link rel="shortcut icon" href="assets/images/oryx.png" type="image/png">
-
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
 </head>
 
 <body class="column">
@@ -19,7 +19,7 @@
 
   <main class="row">
     <section id="class" class="column">
-
+      <div class="container">
       <button id="classes-button" class="class-button row" class-id="Select Class" life="0" mana="0" def="0" att="0" spd="0" dex="0" vit="0" wis="0"></button>
 
       <div id="class-dropdown" class="dropdown hide" tabindex="-1" data-state="hidden">
@@ -57,6 +57,7 @@
         <option id="bard" class-id="Bard" life="575" mana="290" def="25" att="38" spd="29" dex="43" vit="31" wis="43">Bard</option>
 
       </div>
+    </div>
     </section>
     <section id="input-roll" class="column">
       <h2>Your Stats</h2>
@@ -70,6 +71,7 @@
       <button id="check-roll">Check Roll</button>
     </section>
     <section class="column" id="output-roll">
+      <div class="container">
       <div class="row">
         <p>Life: </p><div class="output" id="life-output"></div>
       </div><div class="row">
@@ -86,12 +88,14 @@
         <p>Wisdom: </p><div class="output" id="wis-output"></div>
       </div>
     </section>
+    <footer>
+      <div class="row">
+      <p id="copy-text">He lives and reigns and conquers the world</p>
+      <img id="copy" src="assets/images/clipboard.png">
+      </div>
+    </footer>
   </main>
 
-  <footer>
-    <hr>
-    <p>He lives and reigns and conquers the world.</p>
-  </footer>
 
   <script src="assets/script.js"></script>
 </body>
