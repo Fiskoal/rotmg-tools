@@ -39,7 +39,9 @@ let samurai = document.getElementById("samurai");
 let samuraiId = samurai.getAttribute(samurai);
 let bard = document.getElementById("bard");
 let bardId = bard.getAttribute(bard);
-let allClasses = [rogue, archer, wizard, priest, warrior, knight, paladin, assassin, necromancer, huntress, mystic, trickster, sorcerer, ninja, samurai, bard];
+let summoner = document.getElementById("summoner");
+let summonerId = summoner.getAttribute(summoner);
+let allClasses = [rogue, archer, wizard, priest, warrior, knight, paladin, assassin, necromancer, huntress, mystic, trickster, sorcerer, ninja, samurai, bard, summoner];
 // end of class declarations
 
 // "Select Class" button event listeners
@@ -288,6 +290,20 @@ bard.addEventListener("click", function () {
   classesButton.setAttribute(("spd"), 29);
   classesButton.setAttribute(("dex"), 43);
   classesButton.setAttribute(("vit"), 31);
+  classesButton.setAttribute(("wis"), 43);
+  classesButton.textContent = classesButton.getAttribute("class-id");
+  classesDropdown.blur();
+})
+
+summoner.addEventListener("click", function () {
+  classesButton.setAttribute(("class-id"), "Summoner");
+  classesButton.setAttribute(("life"), 575);
+  classesButton.setAttribute(("mana"), 290);
+  classesButton.setAttribute(("def"), 25);
+  classesButton.setAttribute(("att"), 38);
+  classesButton.setAttribute(("spd"), 31);
+  classesButton.setAttribute(("dex"), 43);
+  classesButton.setAttribute(("vit"), 19);
   classesButton.setAttribute(("wis"), 43);
   classesButton.textContent = classesButton.getAttribute("class-id");
   classesDropdown.blur();
